@@ -192,6 +192,7 @@
                         </div>
                     </div>
                     <div class="mt-6 flex gap-4 justify-center">
+                        <button onclick="clearAllSelections()" class="text-sm text-gray-500 hover:text-gray-700 underline">تصفير الاختيارات</button>
                         <button onclick="clearAllFilters()" class="text-sm text-gray-500 hover:text-gray-700 underline">إلغاء جميع التصفيات</button>
                         <button onclick="printSchedule()" class="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors text-sm">🖨️ طباعة الجدول</button>
                         <button onclick="resetPlan()" class="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors text-sm">🔄 إعادة بناء الخطة</button>
@@ -513,6 +514,17 @@
             }
             subtitleElement.textContent = 'الفصل الدراسي الأول للعام الدراسي 1447هـ';
         }
+        
+        // New function to clear week/day selections
+        function clearAllSelections() {
+            document.querySelectorAll('.week-select').forEach(select => {
+                select.value = '';
+                const daySelect = select.parentElement.querySelector('.day-select');
+                daySelect.style.display = 'none';
+                daySelect.innerHTML = '<option value="">اختر اليوم</option>';
+            });
+            saveState(); // Save the cleared state once
+        }
 
         function clearAllFilters() {
             selectedStages = ['all'];
@@ -764,7 +776,7 @@
                         .stage-row:last-child { border-bottom: none; }
                         .stage-label { font-weight: 600; color: #495057; }
                         .stage-value { background: #e3f2fd; color: #1976d2; padding: 1px 4px; border-radius: 7px; font-weight: bold; font-size: 7px; }
-                        .print-signatures { display: flex; justify-content: space-between; margin-top: 20px; padding: 0 20px; font-size: 11px; font-weight: bold; }
+                        .print-signatures { display: flex; justify-content: space-around; margin-top: 20px; padding: 0 20px; font-size: 11px; font-weight: bold; text-align: center; }
                         .print-footer { position: fixed; bottom: 10px; left: 10px; right: 10px; display: flex; justify-content: center; align-items: center; text-align: center; padding-top: 8px; border-top: 1px solid #ccc; font-size: 9px; }
                         .print-footer img { height: 45px; width: auto; margin-left: 15px; }
                     </style>
@@ -788,10 +800,10 @@
                     ${printContent}
                     <div class="print-signatures">
                         <div>
-                            <p>${leaderName || 'رائد/ة النشاط <br><br> .............................'}</p>
+                            <p style="padding-top: 2em;">${leaderName || '.............................'}</p>
                         </div>
                         <div>
-                            <p>${directorName || 'مدير/ة المدرسة <br><br> .............................'}</p>
+                            <p style="padding-top: 2em;">${directorName || '.............................'}</p>
                         </div>
                     </div>
                     <div class="print-footer">
