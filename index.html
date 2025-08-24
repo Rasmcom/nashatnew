@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نماذج الخطط الدراسية</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap');
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #2883ad; /* Fallback color */
+            background-image: linear-gradient(135deg, #2883ad, #3eaa76), 
+                              url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"%3E%3Cg fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Cpath opacity=".5" d="M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h16v9h1v-9h9v9h1v-9h9v9h1v-9h9v9h1v-9h9v9h1v-9h9v9h1v-9h9v9h1v-9h9v9h1v-9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm0-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm0-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm0-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm0-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9z"/%3E%3Cpath d="M6 5V0h1v5h5v1H6v5H5V6H0V5h5z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+            background-blend-mode: overlay;
+        }
+        .gradient-text {
+            background-image: linear-gradient(135deg, #2883ad, #3eaa76);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            padding-bottom: 5px; /* Added padding to prevent clipping */
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <!-- Pledge Modal -->
+    <div id="pledge-modal" class="hidden fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center z-50 transition-opacity duration-300">
+        <div id="pledge-content" class="bg-white rounded-2xl shadow-2xl p-8 max-w-md w-full text-center transform scale-95 opacity-0 transition-all duration-300">
+            <div class="flex justify-center items-center mb-4">
+                <h2 class="text-3xl font-bold text-gray-800 ml-4">تعهد</h2>
+                <img src="https://k.top4top.io/p_35163lq2x1.gif" alt="تعهد" class="w-16 h-16 rounded-full object-cover">
+            </div>
+            <p class="text-gray-600 mb-6">أقر وأتعهد أمام الله أنني سأستخدم هذا الموقع للأغراض الشخصية فقط، ولن أستخدمه لأي غرض تجاري أو ربحي. كما أتعهد بعدم مشاركة رابط الموقع مع أي شخص آخر.</p>
+            <p class="text-gray-800 font-semibold mb-4">يرجى الضغط على "أوافق" للمتابعة</p>
+            <button id="agree-btn" class="w-full bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 text-white font-bold py-3 px-4 rounded-lg text-xl transition-all duration-300 mb-6">أوافق</button>
+            <div class="border-t pt-4">
+                <p class="text-sm text-gray-700 mb-2">لطلباتكم يشرفنا تواصلكم على قناة رسم للتصميم والخدمات التعليمية اضغط على الشعار للانضمام</p>
+                <a href="https://t.me/+SJnY9vPy7yo5YmI1" target="_blank" rel="noopener noreferrer" class="inline-block">
+                    <img src="https://e.top4top.io/p_3463x5tj40.png" alt="شعار قناة رسم" class="h-16 w-auto mx-auto">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Selection View -->
+    <div id="main-view" class="flex flex-col min-h-screen opacity-0 transition-opacity duration-500">
+        <main class="flex-grow flex items-center justify-center p-4">
+            <div class="w-full max-w-4xl">
+                <div class="flex justify-center mb-8">
+                    <div class="bg-white p-4 rounded-xl shadow-lg">
+                        <img src="https://salogos.org/wp-content/uploads/2021/11/UntiTtled-1-1300x988.png" alt="شعار الوزارة" class="mx-auto w-32 md:w-40 h-auto">
+                    </div>
+                </div>
+
+                <div class="bg-white/90 backdrop-blur-sm p-8 rounded-xl shadow-2xl text-center">
+                    <h1 class="text-3xl font-bold mb-6 gradient-text">اختر نموذج الخطة المطلوب</h1>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <!-- Card 1 -->
+                        <a href="nashat24-8.html" class="plan-link block p-6 bg-gray-50 rounded-lg border border-gray-200 hover:shadow-lg hover:border-blue-400 transition-all duration-300 transform hover:-translate-y-1">
+                            <h2 class="text-xl font-semibold mb-2 text-gray-700">نموذج الخطة الأول</h2>
+                            <p class="text-sm text-gray-600 mb-4 min-h-[80px]">نموذج تفصيلي يعتمد على توزيع البرامج والأنشطة على مدار الأسابيع الدراسية، مع إمكانية تحديد 3 أيام لكل أسبوع.</p>
+                            <div class="overflow-hidden rounded-md h-48">
+                               <img src="https://d.top4top.io/p_3523l43fd0.jpeg" alt="صورة مصغرة لنموذج الخطة الأول" class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500" onerror="this.onerror=null;this.src='https://placehold.co/600x400/eeeeee/cccccc?text=Image+Not+Found';">
+                            </div>
+                        </a>
+                        <!-- Card 2 -->
+                        <a href="nashatweekend8-24.html" class="plan-link block p-6 bg-gray-50 rounded-lg border border-gray-200 hover:shadow-lg hover:border-green-400 transition-all duration-300 transform hover:-translate-y-1">
+                            <h2 class="text-xl font-semibold mb-2 text-gray-700">نموذج الخطة الثاني</h2>
+                            <p class="text-sm text-gray-600 mb-4 min-h-[80px]">نموذج مدمج يعرض الخطة كاملة في جدول واحد، مع تحديد أسبوع ويوم التنفيذ لكل برنامج حسب المرحلة الدراسية.</p>
+                            <div class="overflow-hidden rounded-md h-48">
+                                <img src="https://e.top4top.io/p_3523hwa3v1.jpeg" alt="صورة مصغرة لنموذج الخطة الثاني" class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500" onerror="this.onerror=null;this.src='https://placehold.co/600x400/eeeeee/cccccc?text=Image+Not+Found';">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Wavy Footer -->
+        <footer class="relative w-full text-white text-center text-sm pt-20 pb-4">
+            <div class="absolute bottom-0 left-0 w-full h-32 overflow-hidden" style="z-index: -1;">
+                 <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+                    <path d="M-3.65,79.23 C158.97,184.78 339.95,-34.75 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: rgba(255,255,255,0.1);"></path>
+                    <path d="M-5.33,103.73 C149.99,11.21 349.20,150.00 501.41,98.21 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: rgba(255,255,255,0.15);"></path>
+                </svg>
+            </div>
+            <div class="max-w-4xl mx-auto flex justify-center items-center px-4">
+                <a href="https://t.me/+SJnY9vPy7yo5YmI1" target="_blank" rel="noopener noreferrer" class="ml-4">
+                    <img src="https://h.top4top.io/p_352355x7b1.png" alt="شعار رسم" class="h-16 w-auto">
+                </a>
+                <p class="text-base">جميع الحقوق محفوظة لقناة رسم للتصميم والخدمات التعليمية 2025</p>
+            </div>
+        </footer>
+    </div>
+    
+    <!-- Plan View (Overlay, hidden by default) -->
+    <div id="plan-view" class="hidden fixed inset-0 z-40 bg-white">
+        <iframe id="plan-iframe" class="w-full h-full border-none"></iframe>
+    </div>
+
+    <!-- Floating Home Button (hidden by default) -->
+    <button id="back-to-main-btn" class="hidden fixed top-4 right-4 z-50 flex items-center bg-white/90 backdrop-blur-sm rounded-full shadow-lg hover:shadow-xl transition-all duration-300 pl-5 pr-2 py-2">
+        <span class="font-semibold text-gray-800 text-lg ml-3">الرئيسية</span>
+        <img src="https://b.top4top.io/p_3523lx4qa1.gif" alt="الرئيسية" class="w-10 h-10 rounded-full object-cover">
+    </button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Pledge Modal elements
+            const pledgeModal = document.getElementById('pledge-modal');
+            const pledgeContent = document.getElementById('pledge-content');
+            const agreeBtn = document.getElementById('agree-btn');
+            
+            // App elements
+            const mainView = document.getElementById('main-view');
+            const planView = document.getElementById('plan-view');
+            const planIframe = document.getElementById('plan-iframe');
+            const backButton = document.getElementById('back-to-main-btn');
+            const planLinks = document.querySelectorAll('.plan-link');
+
+            // --- PLEDGE LOGIC ---
+            const PLEDGE_EXPIRATION_TIME = 60 * 60 * 1000; // 1 hour in milliseconds
+            const lastAgreedTimestamp = localStorage.getItem('pledgeAgreedTimestamp');
+            const now = new Date().getTime();
+
+            // Show pledge if it's the first time or if an hour has passed
+            if (!lastAgreedTimestamp || (now - lastAgreedTimestamp > PLEDGE_EXPIRATION_TIME)) {
+                pledgeModal.classList.remove('hidden');
+                setTimeout(() => {
+                    pledgeContent.classList.remove('scale-95', 'opacity-0');
+                    pledgeContent.classList.add('scale-100', 'opacity-100');
+                }, 100);
+            } else {
+                // If pledge is not needed, show main content immediately
+                mainView.classList.remove('opacity-0');
+            }
+
+            // Agree button event listener
+            agreeBtn.addEventListener('click', () => {
+                // Set the timestamp for the next check
+                localStorage.setItem('pledgeAgreedTimestamp', new Date().getTime());
+                
+                pledgeContent.classList.add('scale-95', 'opacity-0');
+                pledgeContent.classList.remove('scale-100', 'opacity-100');
+                pledgeModal.classList.add('opacity-0');
+
+                setTimeout(() => {
+                    pledgeModal.classList.add('hidden');
+                    mainView.classList.remove('opacity-0');
+                }, 300);
+            });
+
+            // --- APP LOGIC ---
+            planLinks.forEach(link => {
+                link.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    const planUrl = link.getAttribute('href');
+                    
+                    planIframe.src = planUrl;
+                    
+                    mainView.classList.add('hidden');
+                    planView.classList.remove('hidden');
+                    backButton.classList.remove('hidden');
+                });
+            });
+
+            backButton.addEventListener('click', () => {
+                planIframe.src = 'about:blank'; // Unload the iframe content
+                
+                mainView.classList.remove('hidden');
+                planView.classList.add('hidden');
+                backButton.classList.add('hidden');
+            });
+        });
+    </script>
+
+</body>
+</html>
